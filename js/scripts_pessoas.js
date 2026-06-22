@@ -28,7 +28,17 @@ formpessoa.addEventListener('submit', (evt) => {
 //criando a funçao ADICIONAR pessoa
 
 const addpessoa = (objpessoa) => {
+    //adicioando objeto literal
     pessoas.push(objpessoa)
+}
+
+//função para listar pessoas do array
+const listpessoas = () => {
+    //pecorrer o array pessoas com o foreach
+    pessoas.forearch((elem , i) => {
+        divlista.innerHTML += `${i} - ${elem.nome} - ${elem.idade}, ${elem.renda} <br>`
+        
+    })
 }
 
 
