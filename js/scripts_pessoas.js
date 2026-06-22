@@ -1,5 +1,5 @@
 //pegando elementos do dom
-const formpessoa = document.querySelector("form-pessoa")
+const formpessoa = document.querySelector("#form-pessoa")
 const divlista = document.querySelector("#div-lista-pessoas")
 
 //criando array pessoas
@@ -23,6 +23,9 @@ formpessoa.addEventListener('submit', (evt) => {
 
     //chamando a funçao addpessoa e passando o objeto literal pessoa 
     addpessoa(pessoa)
+
+    //limpar o fomulario
+    formpessoa.reset()
 })
 
 //criando a funçao ADICIONAR pessoa
@@ -30,14 +33,21 @@ formpessoa.addEventListener('submit', (evt) => {
 const addpessoa = (objpessoa) => {
     //adicioando objeto literal
     pessoas.push(objpessoa)
+
+    //apos adicionar o objeto literal no array chama a função listpessoas
+    listpessoas()
 }
 
 //função para listar pessoas do array
 const listpessoas = () => {
+
+    //limpando a div lista 
+    divlista.innerHTML = ''
+
     //pecorrer o array pessoas com o foreach
-    pessoas.forearch((elem , i) => {
+    pessoas.forEach((elem , i) => {
         divlista.innerHTML += `${i} - ${elem.nome} - ${elem.idade}, ${elem.renda} <br>`
-        
+
     })
 }
 

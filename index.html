@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>pessoa- crud</title>
 
     <link rel="stylesheet" href="css/style_pessoas.css">
-    <script src="js/scripts_pessoas.js" ></script>
+    <script src="js/scripts_pessoas.js" defer></script>
 </head>
+
 <body>
     <div id="geral">
         <h3>cadastro aluno</h3>
@@ -17,27 +19,28 @@
             <p>De R$ 5001,00 Até R$ 8000,00 - Desconto de 10%</p>
             <p>De R$ 8001,00 Até R$ 12000,00 - Desconto de 15%</p>
             <p>Acima de R$ 12000,00 - Desconto 20%</p>
-        
+
         </div>
         <div id="div-form-pessoa">
-            <form id="form-pessoa"></form>
-            
-            <label for="nome">Nome</label>
-            <input type="text" name="nome" id="nome">
+            <form id="form-pessoa">
 
-            <label for="idade">idade</label>
-            <input type="text" name="idade" id="idade">
+                <label for="nome">Nome</label>
+                <input type="text" name="nome" id="nome">
 
-            <label for="renda">renda</label>
-            <input type="text" name="renda" id="renda">
+                <label for="idade">idade</label>
+                <input type="text" name="idade" id="idade">
 
-            <button type="submit" id="btn-add"> adicionar</button>
-            <button type="reset" id="btn-limpar"> limpar</button>
-        </form>
+                <label for="renda">renda</label>
+                <input type="text" name="renda" id="renda">
+
+                <button type="submit" id="btn-add"> adicionar</button>
+                <button type="reset" id="btn-limpar"> limpar</button>
+            </form>
 
         </div>
         <div id="div-lista-pessoas">
         </div>
     </div>
 </body>
+
 </html>
